@@ -81,14 +81,17 @@ public class UF2ACT3Grafica extends JFrame {
 		JRadioButton rdbtnPreparedstatement = new JRadioButton("PreparedStatement");
 		panel_1.add(rdbtnPreparedstatement);
 		
+		// Creem un listener del boto
 		JButton btnIniciarSessio = new JButton("Iniciar Sessio");
 		btnIniciarSessio.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				
+				// Si el radio button esta seleccionat cridem al metode PreparedStatement
 				if (rdbtnPreparedstatement.isSelected()){
 					
+					UF2ACT3.PreparedStatement(textField.getText(),textField_1.getText());
 					
-					
+				// Sino esta seleccionat cridem al metode Statement
 				} else {
 					
 					UF2ACT3.Statement(textField.getText(),textField_1.getText());
